@@ -1,3 +1,21 @@
+var addList = document.getElementsByClassName("student-list")[0],
+clicker = document.getElementsByTagName("h2")[0],
+pageHeader = document.getElementsByClassName('page-header')[0],
+studentSearch = document.createElement("div"),
+body = document.getElementsByClassName("page")[0],
+pagination = document.createElement("div"),
+paginationUl = document.createElement("ul");
+
+addList.setAttribute('id','list');
+clicker.setAttribute('id', 'clicker');
+studentSearch.setAttribute('class', 'student-search');
+pagination.setAttribute('class', 'pagination');
+paginationUl.setAttribute("id", "pagination");
+pageHeader.appendChild(studentSearch);
+body.appendChild(pagination);
+pagination.appendChild(paginationUl);
+
+
 var listChildNodes = Array.from(document.getElementById("list").children),
 nameList = document.getElementById("pagination"),
 searchFor = "",
@@ -12,6 +30,7 @@ buttonArr = [],
 paginationChildNodes,
 paginationChildNodesLength;
 createNumArray();
+
 
  document.getElementsByClassName("student-search")[0].innerHTML = "<input placeholder=\"Search for students...\"> <button>Search</button>";
 // Dynamically Adding Pagination Buttons
